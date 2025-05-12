@@ -15,7 +15,7 @@
    ```bash
    cd /Users/sunilsaini/Desktop/Call_analytics/poc-call-analytics-data_retrieval-conversational_intelligence
    ```
-   > ⚠️ **Important**: Always run commands from this directory. The `pyproject.toml` file must be present.
+   > **Important**: Always run commands from this directory. The `pyproject.toml` file must be present.
 
 2. **Install Poetry** (if not already installed)
    ```bash
