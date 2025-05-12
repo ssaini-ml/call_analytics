@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "call-analytics"
+version = "0.1.0"
+description = ""
+authors = ["Luc Bams <lbm@mediaan.com>"]
+readme = "README.md"
+packages = [{include = "call_analytics", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10,<3.11"
+bulk = "^0.4.2"
+pandas = "^2.2.3"
+langdetect = "^1.0.9"
+umap = "^0.1.1"
+umap-learn = "^0.5.7"
+llvmlite = "^0.44.0"
+embetter = {extras = ["sentence-tfm"], version = "^0.6.6"}
+openpyxl = "^3.1.5"
+scikit-learn = "^1.6.1"
+setfit = "^1.1.1"
+
+torch = "^2.6.0"
+
+torchaudio = "^2.6.0"
+python-dotenv = "^1.0.1"
+azure-ai-textanalytics = "^5.3.0"
+nest-asyncio = "^1.6.0"
+openai = "^1.63.2"
+hiclass = "^5.0.4"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+isort = "^6.0.0"
+ipykernel = "^6.29.5"
+
+
+[[tool.poetry.source]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
