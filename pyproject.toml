@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "call-analytics-conversational-intelligence"
+version = "0.1.0"
+description = "Call Analytics with Conversational Intelligence features"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "call_analytics_conversational", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.0"
+numpy = "^1.26.0"
+requests = "^2.32.0"
+python-dotenv = "^1.0.0"
+tqdm = "^4.67.0"
+nest-asyncio = "^1.6.0"
+pytz = "^2023.4"
+azure-ai-textanalytics = "^5.3.0"
+azure-identity = "^1.22.0"
+jupyter = "^1.1.0"
+ipykernel = "^6.29.0"
+matplotlib = "^3.8.0"
+seaborn = "^0.13.0"
+
+[tool.poetry.scripts]
+data-retrieval = "scripts.data_retrieval:main"
+eda = "scripts.eda:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.12.0"
+isort = "^5.13.0"
+flake8 = "^6.1.0"
+mypy = "^1.15.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
